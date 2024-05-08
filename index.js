@@ -47,7 +47,6 @@ async function run() {
       console.log(newSpot);
       const result = await touristSpotCollection.insertOne(newSpot);
       res.send(result);
-      console.log(result);
     });
 
     app.put('/touristSpot/:id', async (req, res) => {
@@ -79,7 +78,6 @@ async function run() {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
       const result = await touristSpotCollection.deleteOne(query);
-
       res.send(result);
     });
 
