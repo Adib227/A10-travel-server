@@ -47,6 +47,7 @@ async function run() {
       console.log(newSpot);
       const result = await touristSpotCollection.insertOne(newSpot);
       res.send(result);
+      console.log(result);
     });
 
     app.put('/touristSpot/:id', async (req, res) => {
